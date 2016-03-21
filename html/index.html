@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>足球圈子-登录</title>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="css/reset.css"/>
+	</head>
+	<body>
+		<header>足球圈子-登录</header>
+		<div class="form">
+			<input type="text" placeholder="手机号" id="tittell"/>
+			<input type="password" placeholder="密码" id="pwd"/>
+			<div class="links">
+				<a class="reg" href="register.html">注册</a>
+				<a class="pwd" href="findpassword">忘记密码</a>
+			</div>
+			<button type="button">提交</button>
+		</div>
+			
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/zepto.min.js"></script>
+		
+		
+		<script>
+		   
+			$("button").on("tap",function(e){
+	 		  //   alert(1);
+				e.preventDefault();
+				var uid=$("#tittell").val();
+				var pwd=$("#pwd").val();
+				var userInfo=window.localStorage;
+		
+		//(/^1[3|4|5|8]\d{9}$/.test(uid))&&(/^[\@A-Za-z0-9\!\#\$\%\^\&\*\.\~]{6,22}$/).test(pwd)
+			if((/^1[3|4|5|8]\d{9}$/.test(uid))&&(/^[\@A-Za-z0-9\!\#\$\%\^\&\*\.\~]{6,22}$/).test(pwd)){
+				$.ajax({
+					type:"get",
+					url:"http://localhost:8080/Proxy/FootBall/user/json/login.do",
+					data:{'loginname':uid,'password':pwd},
+					async:true,
+					success:function(d){
+						var data=JSON.parse(d);
+						
+						console.log(data);
+	       				userInfo.setItem('loginStatus','1');
+						userInfo.setItem('loginuser',data.data.loginuser.loginname);
+						
+					  ///console.log(data.data.loginuser);
+						
+					}
+				});
+				
+			}
+			else{
+			alert("用户名或密码不正确")
+			   
+			}
+			})
+		</script>
+		
+	</body>
+	
+</html>

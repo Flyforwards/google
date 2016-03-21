@@ -1,0 +1,36 @@
+html{height:100%;}
+body{width:100%;margin:0 auto;height:100%;}
+header{width:100%;height:38px;color:#fff;line-height: 37px;font-size: 16px;background:#0f91c5;text-align: center;}
+
+.search{width:100%;height:29px;padding-top:4px;border-bottom: 1px solid #ccc;margin-bottom: 5px;}
+.search .tit{display:block;width:81%;height:24px;border:1px solid #aaa;float:left;margin-right:2%;margin-left: 2%;line-height: 24px;text-indent: 6px;border-radius: 6px;color:#999;font-size: 12px;}
+
+.search .btn{display: block;width:13%;height:24px;background:#0f91c5;float:left;border-radius: 6px;}
+.main{width:100%;height:104px;background:#fff;}
+.slide_left{width:21%;height:60px;text-align: center;vertical-align: middle;padding-top:10px;float:left;}
+.slide_left img{display:block;width:49px;height:49px;margin-left:18%;}
+
+.slide_right{float:right;width:79%;height:53px;padding-top:17px;}
+.slide_right p:nth-child(1){font-size:13px ;color:#000;}
+.slide_right p:nth-child(2){font-size:11px ;color:#999;margin-top:8px;}
+
+.list{clear:both;width:100%;height:34px;-webkit-column-count:3 ;overflow: hidden;border-bottom: 1px solid #d9d9d9;-webkit-column-gap: 0px;}
+.list div{text-align: center;color:#999;line-height: 29px;font-size: 12px;}
+.list div:nth-child(1){border-bottom:5px solid blue;}
+.list div:hover{border-bottom:5px solid blue;}
+
+#bd{width:100%;height:auto;background:#fff;}
+.box{overflow: hidden;}
+.pic{width:46%;padding:5px;border:1px solid #ccc;float:left;}
+.pic img{display:block;width:100%;}
+
+footer{clear:both;width:100%;height:40px;position: absolute;bottom: 0;border-top:1px solid #dedede;background:#fff;}
+footer ul{width:100%;height:40px;position: relative;}
+footer ul li{float:left;}
+footer ul li:nth-child(1){width:8%;height:39px;line-height:64px;margin-right:14%;font-size: 12px;margin-left:5%;background:url(../images/shouye.png) no-repeat 6% 5px;background-size:20px;}
+footer ul li:nth-child(2){width:8%;height:39px;line-height:64px;margin-right:11%;font-size: 12px;background:url(../images/022.png) no-repeat 6% 5px;background-size:20px;}
+footer ul li:nth-child(3){width:40px;height:40px;margin-right:11%;font-size: 12px;border:1px solid #dedede;border-radius:50%;background:#fff url(../images/05.jpg) no-repeat center;background-size:60%;position:relative;bottom:4px;}
+footer ul li:nth-child(4){width:8%;height:39px;line-height:64px;margin-right:11%;font-size: 12px;background:url(../images/meme.png) no-repeat 6% 5px;background-size:20px;}
+footer ul li:nth-child(5){width:8%;height:39px;line-height:64px;font-size: 12px;background:url(../images/055.png) no-repeat 6% 5px;background-size:18px;}
+footer ul li a{color:#d3d3d3;}
+footer ul li:nth-child(4) a{color:#0f91c5;}
